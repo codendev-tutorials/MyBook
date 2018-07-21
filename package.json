@@ -1,0 +1,25 @@
+{
+  "name": "mybook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongoose": "^5.2.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codendev-tutorials/MyBook.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codendev-tutorials/MyBook/issues"
+  },
+  "homepage": "https://github.com/codendev-tutorials/MyBook#readme"
+}
