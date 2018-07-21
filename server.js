@@ -17,7 +17,7 @@ app.use(express.static('./mybook-client/dist/mybook-client/'))
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.get('*', (req, res) => {
-	res.sendFile(path.join(__dirname, 'mybook-client/dist/mybook-client/'))
+	res.sendFile(path.join(__dirname, 'mybook-client/dist/mybook-client/index.html'))
 })
 
 mongoose.connect(process.env.DB_URL, {
