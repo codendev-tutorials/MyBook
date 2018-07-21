@@ -1,5 +1,7 @@
 //Packages
+require('dotenv').load();
 const express = require('express')
+const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const path = require('path')
 
@@ -16,6 +18,12 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.get('*', (req, res) => {
 	res.sendFile(path.join(__dirname, 'mybook-client/dist/mybook-client/'))
+})
+
+mongoose.connect(process.env.DB_URL, {
+  useNewUrlParser: true
+},(err) => {
+	err ? console.log('Mongoose Connection Error:', err) : console.log('Mongoose Connected')
 })
 
 const server = app.listen($port, "0.0.0.0", () => {
